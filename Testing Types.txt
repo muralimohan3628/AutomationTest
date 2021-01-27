@@ -1,0 +1,30 @@
+Smoke Testing is done on each and every part of an application at a highlevel checking if its working perfectly or not.
+It also cheks weather the critical feauture of application is working fine. test cases are automated
+The main purpose of smoke testing is to reject a software application with defects.
+Smoke Testing is done by both developers or testers,Smoke testing is documented or scripted
+
+
+Sanity testing is a kind of Software Testing performed on few areas of functionality it is also called as narrow and deep testing
+new functionality or fixed bugs are working fine or not and the test cases are not automated
+Sanity Testing is done by testers.Sanity testing is not documented or scripted
+
+
+Regression Testing is nothing but testing an unchanged feature of application. 
+This testing is done to make sure that new code changes should not have side effects on the existing functionalities.
+3 types of regression testing unit , regional and full regeression testing.
+
+Unit regresssion means testing changes done by the developer
+
+Regional testing means testing the changed part and impacted part of the application.
+
+Full regression means testing the changed and unchanged features of an application.
+
+
+Integration testing is the phase in which individual software modules are combined and tested as a group.
+It occurs after unit testing and before validation testing.
+
+Black box testing is nothing but testing functionality of application without looking into the internal code structure how it is written
+
+
+User Acceptance Testing (UAT) is a type of testing performed by the end user or the client to verify the software before moving to the production environment. 
+UAT is done in the final phase of testing
