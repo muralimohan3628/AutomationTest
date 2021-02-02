@@ -1,0 +1,60 @@
+[
+  {
+    "description": "    Feature Description",
+    "keyword": "Feature",
+    "name": "End to end Step Def",
+    "line": 1,
+    "id": "end-to-end-step-def",
+    "tags": [],
+    "uri": "ecommerce.feature",
+    "elements": [
+      {
+        "id": "end-to-end-step-def;ecomm-prod-delivery",
+        "keyword": "Scenario",
+        "line": 5,
+        "name": "Ecomm Prod Delivery",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 6,
+            "name": "visit the page",
+            "result": {
+              "status": "undefined",
+              "duration": 320000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 7,
+            "name": "i add items to cart",
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 8,
+            "name": "validate the prices in cart",
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 9,
+            "name": "select country submit and verify thank you!",
+            "result": {
+              "status": "skipped"
+            }
+          }
+        ]
+      }
+    ]
+  }
+]
