@@ -1,0 +1,95 @@
+/// <reference types="Cypress" />
+import DataEntry from '../../support/pageObjects/DataEntry'
+describe('My First Test Suite', function() 
+{
+    beforeEach(function() {
+        cy.fixture('DataEntry').then(function(data) {
+                this.data=data  })
+      })
+
+    it('Login ',function() {   
+        const DEntry = new DataEntry() 
+        cy.visit(this.data.URL)
+        // login
+        DEntry.getusername().type(this.data.Username)
+        DEntry.getpassword().type(this.data.Password)
+        DEntry.getSignin().click({multiple: true})
+        DEntry.getSuccess().click()        
+        
+    })
+    it('Create Quiz Assessment ',function() {
+        const DEntry = new DataEntry()
+        DEntry.getCreateAssessment().click({force: true})
+        DEntry.getNameAssessment().type(this.data.Quiz)
+        DEntry.getType1().contains(this.data.Testtype)
+        DEntry.getCurriculam().contains(this.data.Curriculum)
+        DEntry.getGrade().contains(this.data.Class)
+        DEntry.getSubject().contains(this.data.Subject)
+        DEntry.getLevel().contains(this.data.Level)
+        DEntry.getDuration().clear()
+        cy.wait(1000)
+        DEntry.getDuration().type(this.data.Duration)
+        DEntry.getMarks().clear()
+        cy.wait(1000)
+        DEntry.getMarks().type(this.data.Marks)
+        //DEntry.getAddNew().click()
+        DEntry.getChapterQuiz().contains(this.data.QzChapter)
+        DEntry.getQuizTopic().contains(this.data.QzTopic)
+        DEntry.getQuizSubTopic().contains(this.data.QzSubTopic)
+        DEntry.getSelectquestions().click()
+        cy.wait(7000)
+        DEntry.getChapter().contains(this.data.Chapter)
+        Cypress.on('uncaught:exception', (err, runnable) => {
+            return false
+          })
+        DEntry.getTopic().contains(this.data.Topic)  
+        DEntry.getDifficulty().contains(this.data.Level)
+        DEntry.getSkillType().contains(this.data.Skill)
+        //DEntry.getUsage().contains('Regular')
+        DEntry.getPastexam().contains(this.data.pastExm)
+        DEntry.getExamyear().contains(this.data.Year)
+        DEntry.getQstntype().contains(this.data.QstType)
+        DEntry.getDescript().type(this.data.content)
+        DEntry.getConcept().type(this.data.content)
+        DEntry.getAddquestion1().click({ force: true })
+        DEntry.getAddquestion2().click({ force: true })
+        DEntry.getAddquestion3().click({ force: true })
+        DEntry.getAddquestion4().click({ force: true })
+        DEntry.getAddquestion5().click({ force: true })
+        DEntry.getOK().click({force:true})
+        cy.wait(2500)
+        DEntry.getDeleteqstn().click()
+        DEntry.getSuccess().click()
+        DEntry.getAddNew().click()
+    })
+    it('Add MCQ Questions ',function() {
+        const DEntry = new DataEntry()
+        DEntry.getCurriculamAdd().contains(this.data.Curriculum)
+        DEntry.getGradeAdd().contains(this.data.Class)
+        DEntry.getSubjectAdd().contains(this.data.Subject)
+        DEntry.getChapterAdd().contains(this.data.Chapter)
+        DEntry.getTopicAdd().contains(this.data.Topic)
+        DEntry.getDifficultAdd().contains(this.data.Level)
+        DEntry.getSkillTypeAdd().contains(this.data.Skill)
+        DEntry.getQstntypeAdd1().contains(this.data.QstType)
+          Cypress.on('uncaught:exception', (err, runnable) => {
+               return false
+            })
+          DEntry.getqstnDescription().clear()
+          cy.wait(1000)    
+          DEntry.getqstnDescription().type(this.data.discript)
+          
+          DEntry.getMCQDescrip1().type(this.data.MCQDescrip)
+          DEntry.getMCQDescrip2().type(this.data.MCQDescrip)
+          DEntry.getMCQDescrip3().type(this.data.MCQDescrip)
+          DEntry.getMCQDescrip4().type(this.data.MCQDescrip)
+          DEntry.getRadio().check(this.data.RadioAns)
+          
+          DEntry.getPreview().click()
+          DEntry.getClose().click()
+          DEntry.getSave().click()
+          DEntry.getCLOSE().click()
+          DEntry.getSaving().click()  
+    })
+    
+})
