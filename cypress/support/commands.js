@@ -12,19 +12,6 @@
 // -- This is a parent command --
 // Cypress.Commands.add("login", (email, password) => { ... })
 //
-
-Cypress.Commands.add("selectProduct", (productName) => { 
-    cy.get('h4.card-title').each(($el, index, $list) => {
-        if($el.text().includes(productName))
-        {
-            cy.get('button.btn.btn-info').eq(index).click()
-        }
-        
-        })
-
-
-})
-
 //
 // -- This is a child command --
 // Cypress.Commands.add("drag", { prevSubject: 'element'}, (subject, options) => { ... })
@@ -36,3 +23,25 @@ Cypress.Commands.add("selectProduct", (productName) => {
 //
 // -- This is will overwrite an existing command --
 // Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
+
+import Signin from '../support/pageObjects/Signin'
+
+const Assessmnt = require('../fixtures/Assessment.json')
+const Constvarbl = require('../fixtures/ConstVarbl.json')
+const Dataentry = require('../fixtures/DatEntry.json')
+
+Cypress.Commands.add("Signin", ( Username, Password) => {
+    const LogIn =new Signin();
+    cy.visit(Dataentry.URL)
+    LogIn.getUsername().type(Username).should('have.value', Username)
+    LogIn.getPassword().type(Password).should('have.value', Password)
+    LogIn.getSignin().click()
+    LogIn.getSuccess().click()  
+  })
+
+//Logout Fx
+Cypress.Commands.add("Logout", ()=>{
+    
+    cy.wait(2000)
+    cy.get('[ng-click="logout()"]').click()
+})  

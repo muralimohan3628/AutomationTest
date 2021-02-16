@@ -56,6 +56,10 @@ class TeacherAssess
     {
         return cy.get('[ng-click="createAndPush()"]')
     }
+    getSelectQstns()
+    {
+        return cy.get('[ng-click="addQuestions()"]')
+    }
     getChapter()
     {
         return cy.get('select').eq(12).select('9')
