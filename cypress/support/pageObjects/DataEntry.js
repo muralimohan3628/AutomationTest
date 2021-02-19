@@ -108,7 +108,7 @@ class DataEntry
     {
         return cy.get('select').eq(20).select('0')
     }
-    getDescript()
+    getDescription()
     {
         return cy.get('[ng-model="filter.description"]')
     }
@@ -148,35 +148,35 @@ class DataEntry
     {
         return cy.get('[ng-click="addNewQuestion()"]')
     }
-    getCurriculamAdd()
+    getAddCurriculam()
     {
         return cy.get('select').eq(11).select('0')
     }
-    getGradeAdd()
+    getAddGrade()
     {
         return cy.get('select').eq(12).select('0')
     }
-    getSubjectAdd()
+    getAddSubject()
     {
         return cy.get('select').eq(13).select('0')
     }
-    getChapterAdd()
+    getAddChapter()
     {
         return cy.get('select').eq(14).select('0')
     }
-    getTopicAdd()
+    getAddTopic()
     {
         return cy.get('select').eq(15).select('1')
     }
-    getDifficultAdd()
+    getAddDifficulty()
     {
         return cy.get('select').eq(16).select('0')
     }
-    getSkillTypeAdd()
+    getAddSkillType()
     {
         return cy.get('select').eq(17).select('4')
     }
-    getQstntypeAdd()
+    getAddQstntype()
     {
         return cy.get('select').eq(22).select('1')
     }
@@ -296,7 +296,7 @@ class DataEntry
     {
         return cy.get('select').eq(10).select('0')
     }
-    getAssessOwner()
+    getOwner()
     {
         return cy.get('select').eq(11).select('0')
     }

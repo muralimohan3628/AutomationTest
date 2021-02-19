@@ -1,6 +1,6 @@
 /// <reference types="Cypress" />
-import Teacherobj from '../../support/pageObjects/Teacherobj'
-const TeacherOBJ = new Teacherobj()
+import Timeline from '../../support/pageObjects/Timeline'
+const timeline = new Timeline()
 const Constvarbl = require('../../fixtures/ConstVarbl.json')
 describe('My First Test Suite', function() 
 {
@@ -9,19 +9,18 @@ describe('My First Test Suite', function()
             Constvarbl.TeacherPassword);
      }); 
     it('Timeline',function() {
-        TeacherOBJ.getCurriculam()
+        cy.Curriculum()
+        timeline.getTimeline()
             .click()
-        TeacherOBJ.getTimeline()
+        timeline.getLastweek()
             .click()
-        TeacherOBJ.getLastweek()
+        timeline.getThisMonth()
             .click()
-        TeacherOBJ.getThisMonth()
+        timeline.getnext()
             .click()
-        TeacherOBJ.getnext()
+        timeline.getprevious()
             .click()
-        TeacherOBJ.getprevious()
-            .click()
-        TeacherOBJ.getThisweek()
+        timeline.getThisweek()
             .click()    
         cy.Logout()
     })    

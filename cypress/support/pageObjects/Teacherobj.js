@@ -259,31 +259,7 @@ class Teacherobj
     getEntranceExamConcepts()
     {
         return cy.get('[title="Types Of Matrices"]')
-    }
-    getCreateLesson()
-    {
-        return cy.get('#dropdownLessonPlan').find('[ui-sref="lessonPlanCreate"]')
-    }
-    getLessonLang()
-    {
-        return cy.get('select').eq(1).select('0')
-    }
-    getLessonClass()
-    {
-        return cy.get('select').eq(2).select('0')
-    }
-    getLessonSubj()
-    {
-        return cy.get('select').eq(3).select('1')
-    }
-    getLessonChapter()
-    {
-        return cy.get('select').eq(4).select('3')
-    }
-    getLessonTopic()
-    {
-        return cy.get('ul li.option')
-    }
+    }  
     getEditNotes()
     {
         return cy.get('.fa.fa-pencil')
@@ -307,39 +283,7 @@ class Teacherobj
     getCreateLessonPlan()
     {
         return cy.get('[ng-click="savePlan()"]')
-    }
-    getExternalLink()
-    {
-        return cy.get('[ng-click="addExternalLink()"]')
-    }
-    getLinkname()
-    {
-        return cy.get('[ng-model="linkName"]')
-    }
-    getURL()
-    {
-        return cy.get('[ng-model="externalLink"]')
-    }
-    getViewLesson()
-    {
-        return cy.get('#dropdownLessonPlan').find('[ui-sref="lessonPlanView"]')
-    }
-    getViewClass()
-    {
-        return cy.get('select').eq(1).select('0')
-    }
-    getViewsubject()
-    {
-        return cy.get('select').eq(2).select('1')
-    }
-    getViewchapter()
-    {
-        return cy.get('select').eq(3).select('2')
     }    
-    getViewdate()
-    {
-        return cy.get('select').eq(4).select('1')
-    }
     getEditLesson()
     {
         return cy.get('[ng-click="editPlan()"]')
@@ -420,46 +364,6 @@ class Teacherobj
     {
         return cy.get('select').eq(6).select('0')
     }
-    getStudentReorts()
-    {
-        return cy.get('#dropdownReports').find('[ui-sref="report.student.menu"]')
-    }
-    getclassReport()
-    {
-        return cy.get('select').eq(1).select('1')
-    }
-    getReportname()
-    {
-        return cy.get('[type="text"]')
-    }
-    getReportSection()
-    {
-        return cy.get('select').eq(2).select('0')
-    }
-    getPerformance()
-    {
-        return cy.get('[ng-click="viewStudentPerformance(student)"]')
-    }
-    getMonthPerformance()
-    {
-        return cy.get('select').eq(1).select('0')
-    }
-    getMonthUsage()
-    {
-        return cy.get('select').eq(1).select('0')
-    }
-    getSubPerfom()
-    {
-        return cy.get('select').eq(2).select('1')
-    }
-    getChapterPerform()
-    {
-        return cy.get('select').eq(3).select('5')
-    }
-    getPerformTopic()
-    {
-        return cy.get('ul li.option')
-    }
     getActivityTab()
     {
         return cy.get('[heading="Activity"]')
@@ -476,66 +380,6 @@ class Teacherobj
     {
         return cy.get('[heading="Collaboration"]')
     }
-    getUasgeReport()
-    {
-        return cy.get('[ng-click="viewStudentUsage(student)"]')
-    }
-    getComparativeperf()
-    {
-        return cy.get('[ng-click="viewStudentComparativePerformance(student)"]')
-    }
-    getComparativesub()
-    {
-        return cy.get('select').eq(1).select('3')
-    }
-    getComparativesubChapter()
-    {
-        return cy.get('select').eq(2).select('0')
-    }
-    getComparativetopics()
-    {
-        return cy.get('ul li.option')
-    }
-    getComparativegrade()
-    {
-        return cy.get('select').eq(4).select('1')
-    }
-    getCustomdates()
-    {
-        return cy.get('select').eq(5).select('1')
-    }
-    getClasReports()
-    {
-        return cy.get('#dropdownReports').find('[ui-sref="report.teacher.aggregate"]')
-    }
-    getClsreportGrade()
-    {
-        return cy.get('select').eq(1).select('1')
-    }
-    getClsreportsub()
-    {
-        return cy.get('select').eq(2).select('3')
-    }
-    getClsreportsection()
-    {
-        return cy.get('select').eq(3).select('0')
-    }
-    getTimeline()
-    {
-        return cy.get('.timeline')
-    } 
-    getLastweek()
-    {
-        return cy.get('[heading="Last Week"]')
-    } 
-    getThisMonth()
-    {
-        return cy.get('[heading="This Month"]')
-    }
-    getThisweek()
-    {
-        return cy.get('[heading="This Week"]')
-    }
     getnext()
     {
         return cy.get('.fc-next-button')
@@ -543,85 +387,6 @@ class Teacherobj
     getprevious()
     {
         return cy.get('.fc-prev-button')
-    }
-    getSettings()
-    {
-        return cy.get('.settings')
-    }
-    getCurrPasswd()
-    {
-        return cy.get('[name="currentPassword"]')
-    }
-    getNewPasswd()
-    {
-        return cy.get('[name="newPassword"]')
-    }
-    getVerifyPasswd()
-    {
-        return cy.get('[name="newPasswordVerify"]')
-    }
-    getSettingsCls()
-    {
-        return cy.get('select').eq(3).select('0')
-    }
-    getSettingsSectn()
-    {
-        return cy.get('select').eq(4).select('0')
-    }
-    getStudntSettngs()
-    {
-        return cy.get('select').eq(5).select('0')
-    }
-    getCancelSettings()
-    {
-        return cy.get('[value="Cancel"]')
-    }
-    getFeedbackIcon()
-    {
-        return cy.get('.fa-pencil-square')
-    }
-    getFeedback()
-    {
-        return cy.get('[data-ng-model="feedback"]')
-    }
-    getCancelFeedback()
-    {
-        return cy.get('[ng-click="negativeResponse()"]')
-    }
-    getUploadContent()
-    {
-        return cy.get('.upload-content')
-    }
-    getUploadContentName()
-    {
-        return cy.get('[placeholder="Enter Content Name"]')
-    }
-    getClassUpload()
-    {
-        return cy.get('select').eq(1).select('1')
-    }
-    getSubjUpload()
-    {
-        return cy.get('select').eq(2).select('0')
-    }
-    getChaperUpload()
-    {
-        return cy.get('select').eq(3).select('1')
-    }
-    getTopicsUpload()
-    {
-        return cy.get('ul li.option')
-    }
-    getDescriptionUplod()
-    {
-        return cy.get('[placeholder="Enter Description(Optional)"]')
-    }
-    getConceptupload()
-    {
-        return cy.get('[placeholder="Enter Concept(Optional)"]')
-    }
+    }  
 }
 export default Teacherobj
-
-
-

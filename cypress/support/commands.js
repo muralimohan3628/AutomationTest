@@ -39,6 +39,11 @@ Cypress.Commands.add("Signin", ( Username, Password) => {
     LogIn.getSuccess().click()  
   })
 
+  //Curriculum
+  Cypress.Commands.add("Curriculum", ()=>{
+    
+    cy.get('.icon-curriculum.dash-img').click()
+  })
 //Logout Fx
 Cypress.Commands.add("Logout", ()=>{
     

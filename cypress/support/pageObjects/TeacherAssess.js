@@ -8,27 +8,27 @@ class TeacherAssess
     {
         return cy.get('#assessmentName')
     }
-    getAssessLanguage()
+    getLanguage()
     {
         return cy.get('select').eq(1).select('0')
     }
-    getAssessClass()
+    getClass()
     {
         return cy.get('select').eq(2).select('0')
     }
-    getAssessSubj()
+    getSubject()
     {
         return cy.get('select').eq(3).select('0')
     }
-    getAssessDifficulty()
+    getLevelDifficulty()
     {
         return cy.get('select').eq(5).select('1')
     }
-    getAssessTime()
+    getDuration()
     {
         return cy.get('select').eq(6).select('0')
     }
-    getAssessMarks()
+    getMarks()
     {
         return cy.get('select').eq(7).select('0')
     }
@@ -36,11 +36,11 @@ class TeacherAssess
     {
         return cy.get('[ng-model="filter.name"]')
     }
-    getAssessLevel()
+    getLevel()
     {
         return cy.get('select').eq(10).select('0')
     }
-    getAssessOwner()
+    getOwner()
     {
         return cy.get('select').eq(11).select('3')
     }
@@ -124,7 +124,7 @@ class TeacherAssess
     {
         return cy.get('[ng-click="getQuestions()"]')
     }
-    getViewAssess()
+    getViewAssessment()
     {
         return cy.get('#dropdownAssessment').find('li > [ui-sref="assessmentList"]')
     }
@@ -136,29 +136,93 @@ class TeacherAssess
     {
         return cy.get('ul li li:nth-child(7)')
     }
-    getViewAssessCls()
+    getViewClass()
     {
         return cy.get('select').eq(1).select('0')
     }
-    getViewAssessSubj()
+    getViewSubject()
     {
         return cy.get('select').eq(2).select('2')
     }
-    getViewAssessChapter()
+    getViewChapter()
     {
         return cy.get('select').eq(3).select('0')
     }
-    getViewAssessDate()
+    getViewDate()
     {
         return cy.get('select').eq(4).select('0')
     }
-    getAssessPushed()
+    getPushedAssessment()
     {
         return cy.get('[ng-click="showPushedAssessments()"]')
     }
     getPushedContent()
     {
         return cy.get('tr td:nth-child(3)')
+    }
+    getCalender1()
+    {
+        return cy.get('.fa-calendar').eq(0)
+    }
+    getDate()
+    {
+        return cy.get('.datepicker .datepicker-days .table-condensed tr:nth-child(3) td')
+    }
+    getCalender2()
+    {
+        return cy.get('.fa-calendar').eq(1)
+    }
+    getcloseDialog()
+    {
+        return cy.get('[ng-click="closeThisDialog()"]')
+    }
+    getCreateandPush()
+    {
+        return cy.get('[ng-click="createAndPush()"]')
+    }
+    getCheckbox()
+    {
+        return cy.get('[type="checkbox"]')
+    }
+    getStartCalender()
+    {
+        return cy.get('.fa-calendar').eq(0)
+    }
+    getEndCalender()
+    {
+        return cy.get('.fa-calendar').eq(1)
+    }
+    getDateandTime()
+    {
+        return cy.get('.datetimepicker .table-condensed tr:nth-child(5) td')
+    }
+    getDateandTime1()
+    {
+        return cy.get('.datetimepicker .table-condensed tr:nth-child(5) td')
+    }
+    getCalenderHour()
+    {
+        return cy.get('.hour:nth-child(18)')
+    }
+    getCalenderHour1()
+    {
+        return cy.get('.hour:nth-child(22)')
+    }
+    getCalenderMinute()
+    {
+        return cy.get('.minute:nth-child(10)')
+    }
+    getCalenderMinute1()
+    {
+        return cy.get('.minute:nth-child(10)')
+    }
+    getCancel()
+    {
+        return cy.get('[ng-click="cancelPush()"]')
+    }
+    getBack()
+    {
+        return cy.get('[ng-click="goBack()"]')
     }
 }
 export default TeacherAssess

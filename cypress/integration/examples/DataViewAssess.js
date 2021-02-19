@@ -9,8 +9,7 @@ describe('My First Test Suite', function()
             Dataentry.Paswd);
      });
     it('Create Assessment Use Pre-Made',function() {
-        DEntry.getCurriculamTab()
-            .click()
+        cy.Curriculum()
         DEntry.getCreateAssess()
             .click({force: true})
         DEntry.getAssessmentName()
@@ -33,7 +32,7 @@ describe('My First Test Suite', function()
             .type(Dataentry.name)
         DEntry.getAssessLevel()
             .contains(Dataentry.Level)
-        DEntry.getAssessOwner()
+        DEntry.getOwner()
             .contains(Dataentry.Owner)
         DEntry.getAssessDate()
             .contains(Dataentry.CreatedDate)

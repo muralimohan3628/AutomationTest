@@ -1,42 +1,41 @@
 /// <reference types="Cypress" />
-import Teacherobj from '../../support/pageObjects/Teacherobj'
-const TeacherOBJ = new Teacherobj()
+import Grade from '../../support/pageObjects/Grade'
+const grade = new Grade()
 const Constvarbl = require('../../fixtures/ConstVarbl.json')
 describe('My First Test Suite', function() 
 {
     it('Signin', ()=>{
         cy.Signin(Constvarbl.TeacherUserName,
             Constvarbl.TeacherPassword);
-     }); 
+    }); 
     it('Grade-book',function() {
-        TeacherOBJ.getCurriculam()
-            .click()
+        cy.Curriculum()
         cy.wait(2000)
-        TeacherOBJ.getGradebook()
+        grade.getGradebook()
             .click()
-        TeacherOBJ.getGradeClass()
+        grade.getClass()
             .contains(Constvarbl.Class)
-        TeacherOBJ.getGradesection()
+        grade.getSection()
             .contains(Constvarbl.Section)
-        TeacherOBJ.getGradesubj()
+        grade.getSubject()
             .contains(Constvarbl.GradeSubj)
-        TeacherOBJ.getGradetype()
+        grade.getGradetype()
             .contains(Constvarbl.GradeType)
         cy.contains(Constvarbl.AddAssess)
             .click()
-        TeacherOBJ.getGradeChapter()
+        grade.getChapter()
             .contains(Constvarbl.gradechapter)
-        TeacherOBJ.getAssesmName()
+        grade.getAssesmentName()
             .type(Constvarbl.AssessName)
-        TeacherOBJ.getCalender1()
+        grade.getCalender1()
             .click()
-        TeacherOBJ.getDate()
+        grade.getDate()
             .contains(Constvarbl.Date1).click()
-        TeacherOBJ.getCalender2()
+        grade.getCalender2()
             .click()
-        TeacherOBJ.getDate()
+        grade.getDate()
             .contains(Constvarbl.Date2).click()
-        TeacherOBJ.getGrademarks()
+        grade.getMarks()
             .contains(Constvarbl.Marks)
         cy.contains(Constvarbl.CreateNdPush)
             .click()

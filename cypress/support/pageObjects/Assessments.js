@@ -16,7 +16,7 @@ class Assessments
     {
         return cy.get('.icon-assessment.dash-img')
     }
-    getAssesmentSubject()
+    getSubject()
     {
         return cy.get('.Botany')
     }

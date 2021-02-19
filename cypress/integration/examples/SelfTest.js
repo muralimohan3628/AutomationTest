@@ -12,7 +12,7 @@ describe('My First Test Suite', function()
 it('opening Assessments ',function() {    
     Assessment.getAssessmentsTab()
         .click({ multiple: true })
-    Assessment.getAssesmentSubject()
+    Assessment.getSubject()
         .click()    
 })
 it('Creating Assessments',function() {

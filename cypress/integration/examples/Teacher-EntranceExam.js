@@ -1,6 +1,6 @@
 /// <reference types="Cypress" />
-import Teacherobj from '../../support/pageObjects/Teacherobj'
-const TeacherOBJ = new Teacherobj()
+import EntranceExam from '../../support/pageObjects/EntanceExm'
+const entrance = new EntranceExam()
 const Constvarbl = require('../../fixtures/ConstVarbl.json')
 describe('My First Test Suite', function() 
 {
@@ -9,17 +9,16 @@ describe('My First Test Suite', function()
             Constvarbl.TeacherPassword);
      }); 
     it('EntranceExamPractise',function() {
-        TeacherOBJ.getCurriculam()
+        cy.Curriculum()
+        entrance.getEntranceExam()
             .click()
-        TeacherOBJ.getEntranceExam()
+        entrance.getSubPhysics()
             .click()
-        TeacherOBJ.getSubPhysics()
+        entrance.getSubMathematics()
             .click()
-        TeacherOBJ.getSubMathematics()
-            .click()
-        TeacherOBJ.getEntranceExamChapter()
+        entrance.getExamChapter()
             .contains(Constvarbl.EntrancChpter)
-        TeacherOBJ.getEntranceExamConcepts()
+        entrance.getExamConcepts()
             .click()
         cy.contains(Constvarbl.RelatedChapter)
             .click()
@@ -29,7 +28,7 @@ describe('My First Test Suite', function()
             .click({force: true})
         cy.contains('Fit Page')
             .click()
-        TeacherOBJ.getNavigateback()
+        entrance.getNavigateback()
             .click()
         cy.Logout()
     })
