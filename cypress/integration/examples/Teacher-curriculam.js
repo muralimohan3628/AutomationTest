@@ -1,12 +1,12 @@
 /// <reference types="Cypress" />
 import Curriculam from '../../support/pageObjects/Curriculam'
 const curriculum = new Curriculam()
-const Constvarbl = require('../../fixtures/ConstVarbl.json')
+const curriclum = require('../../fixtures/Curriculum.json')
 describe('My First Test Suite', function() 
 {
     it('Signin', ()=>{
-        cy.Signin(Constvarbl.TeacherUserName,
-            Constvarbl.TeacherPassword);
+        cy.Signin(curriclum.TeacherUserName,
+            curriclum.TeacherPassword);
      }); 
 it('Curriculam page',function() {
     cy.Curriculum()
@@ -46,7 +46,7 @@ it('Curriculam page',function() {
     curriculum.getNotesArea()
         .click()
     curriculum.getNotesTyping()
-        .type(Constvarbl.videoNotes)
+        .type(curriclum.videoNotes)
     curriculum.getSaveNote()
         .click()
     curriculum.getNavigateback()

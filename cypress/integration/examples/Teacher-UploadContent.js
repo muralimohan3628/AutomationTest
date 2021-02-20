@@ -1,37 +1,37 @@
 /// <reference types="Cypress" />
 import Upload from '../../support/pageObjects/Upload'
 const upload = new Upload()
-const Constvarbl = require('../../fixtures/ConstVarbl.json')
+const uplodng = require('../../fixtures/UPLOAD.json')
 describe('My First Test Suite', function() 
 {
     it('Signin', ()=>{
-        cy.Signin(Constvarbl.TeacherUserName,
-            Constvarbl.TeacherPassword);
+        cy.Signin(uplodng.TeacherUserName,
+            uplodng.TeacherPassword);
      });        
     it('Upload content',function() {
         cy.Curriculum()
         upload.getUploadContent()
             .click()
         upload.getContentName()
-            .type(Constvarbl.Content)
+            .type(uplodng.Content)
         upload.getClass()
-            .contains(Constvarbl.ContentCls)
+            .contains(uplodng.ContentCls)
         upload.getSubject()
-            .contains(Constvarbl.Subject)
+            .contains(uplodng.Subject)
         upload.getChapter()
-            .contains(Constvarbl.ContentChpter)
+            .contains(uplodng.ContentChpter)
         cy.wait(1000)    
         upload.getTopics()
-            .contains(Constvarbl.ContentTopic)
+            .contains(uplodng.ContentTopic)
                 .click({force: true})
         cy.wait(1000)
         upload.getTopics()
-            .contains(Constvarbl.ContentSubTopic)
+            .contains(uplodng.ContentSubTopic)
                 .click({force: true})
         upload.getDescription()
-            .type(Constvarbl.Content)
+            .type(uplodng.Content)
         upload.getConcept()
-            .type(Constvarbl.Content)
+            .type(uplodng.Content)
         upload.getCheckbox()
             .check()
                 .should('be.checked')  

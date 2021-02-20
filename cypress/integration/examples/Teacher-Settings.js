@@ -1,37 +1,37 @@
 /// <reference types="Cypress" />
 import Settings from '../../support/pageObjects/Settings'
 const settings = new Settings()
-const Constvarbl = require('../../fixtures/ConstVarbl.json')
+const setting = require('../../fixtures/Settings.json')
 describe('My First Test Suite', function() 
 {
     it('Signin', ()=>{
-        cy.Signin(Constvarbl.TeacherUserName,
-            Constvarbl.TeacherPassword);
+        cy.Signin(setting.TeacherUserName,
+            setting.TeacherPassword);
      }); 
     it('Settings',function() {
         cy.Curriculum()
         settings.getSettings()
             .click()
         settings.getCurrentPasswd()
-            .type(Constvarbl.name)
+            .type(setting.name)
         settings.getNewPasswd()
-            .type(Constvarbl.pwd)
+            .type(setting.pwd)
         settings.getVerifyPasswd()
-            .type(Constvarbl.pwd)
+            .type(setting.pwd)
         settings.getCheckbox()
             .check()  
         settings.getSettingsCls()
-            .contains(Constvarbl.Class)
+            .contains(setting.Class)
         settings.getSettingsSection()
-            .contains(Constvarbl.Section)
+            .contains(setting.Section)
         settings.getStudntSettngs()
-            .contains(Constvarbl.pwdUser)
+            .contains(setting.pwdUser)
         settings.getCancelSettings()
             .click()
         settings.getFeedbackIcon()
             .click()
         settings.getFeedback()
-            .type(Constvarbl.Description)
+            .type(setting.Description)
         settings.getCancelFeedback()
             .click()
         cy.Logout()

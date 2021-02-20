@@ -1,12 +1,12 @@
 /// <reference types="Cypress" />
 import Grade from '../../support/pageObjects/Grade'
 const grade = new Grade()
-const Constvarbl = require('../../fixtures/ConstVarbl.json')
+const grading = require('../../fixtures/Grading.json')
 describe('My First Test Suite', function() 
 {
     it('Signin', ()=>{
-        cy.Signin(Constvarbl.TeacherUserName,
-            Constvarbl.TeacherPassword);
+        cy.Signin(grading.TeacherUserName,
+            grading.TeacherPassword);
     }); 
     it('Grade-book',function() {
         cy.Curriculum()
@@ -14,30 +14,30 @@ describe('My First Test Suite', function()
         grade.getGradebook()
             .click()
         grade.getClass()
-            .contains(Constvarbl.Class)
+            .contains(grading.Class)
         grade.getSection()
-            .contains(Constvarbl.Section)
+            .contains(grading.Section)
         grade.getSubject()
-            .contains(Constvarbl.GradeSubj)
+            .contains(grading.GradeSubj)
         grade.getGradetype()
-            .contains(Constvarbl.GradeType)
-        cy.contains(Constvarbl.AddAssess)
+            .contains(grading.GradeType)
+        cy.contains(grading.AddAssess)
             .click()
         grade.getChapter()
-            .contains(Constvarbl.gradechapter)
+            .contains(grading.gradechapter)
         grade.getAssesmentName()
-            .type(Constvarbl.AssessName)
+            .type(grading.AssessName)
         grade.getCalender1()
             .click()
         grade.getDate()
-            .contains(Constvarbl.Date1).click()
+            .contains(grading.Date1).click()
         grade.getCalender2()
             .click()
         grade.getDate()
-            .contains(Constvarbl.Date2).click()
+            .contains(grading.Date2).click()
         grade.getMarks()
-            .contains(Constvarbl.Marks)
-        cy.contains(Constvarbl.CreateNdPush)
+            .contains(grading.Marks)
+        cy.contains(grading.CreateNdPush)
             .click()
         cy.Logout()
     })    

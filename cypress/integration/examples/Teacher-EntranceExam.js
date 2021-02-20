@@ -1,12 +1,12 @@
 /// <reference types="Cypress" />
 import EntranceExam from '../../support/pageObjects/EntanceExm'
 const entrance = new EntranceExam()
-const Constvarbl = require('../../fixtures/ConstVarbl.json')
+const entrnce = require('../../fixtures/Entrance.json')
 describe('My First Test Suite', function() 
 {
     it('Signin', ()=>{
-        cy.Signin(Constvarbl.TeacherUserName,
-            Constvarbl.TeacherPassword);
+        cy.Signin(entrnce.TeacherUserName,
+            entrnce.TeacherPassword);
      }); 
     it('EntranceExamPractise',function() {
         cy.Curriculum()
@@ -17,16 +17,16 @@ describe('My First Test Suite', function()
         entrance.getSubMathematics()
             .click()
         entrance.getExamChapter()
-            .contains(Constvarbl.EntrancChpter)
+            .contains(entrnce.EntrancChpter)
         entrance.getExamConcepts()
             .click()
-        cy.contains(Constvarbl.RelatedChapter)
+        cy.contains(entrnce.RelatedChapter)
             .click()
         cy.contains('>')
             .click({force: true})// next pdf page
         cy.contains('+')
             .click({force: true})
-        cy.contains('Fit Page')
+        cy.contains(entrnce.FitPage)
             .click()
         entrance.getNavigateback()
             .click()

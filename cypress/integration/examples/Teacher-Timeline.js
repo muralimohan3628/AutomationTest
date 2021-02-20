@@ -1,12 +1,12 @@
 /// <reference types="Cypress" />
 import Timeline from '../../support/pageObjects/Timeline'
 const timeline = new Timeline()
-const Constvarbl = require('../../fixtures/ConstVarbl.json')
+const time = require('../../fixtures/Timeline.json')
 describe('My First Test Suite', function() 
 {
     it('Signin', ()=>{
-        cy.Signin(Constvarbl.TeacherUserName,
-            Constvarbl.TeacherPassword);
+        cy.Signin(time.TeacherUserName,
+            time.TeacherPassword);
      }); 
     it('Timeline',function() {
         cy.Curriculum()
