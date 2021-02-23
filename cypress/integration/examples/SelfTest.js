@@ -20,7 +20,7 @@ it('Creating Assessments',function() {
     Assessment.getCreateNewAssesment()
         .click()
     Assessment.getAssessmentsName()
-        .type('Practical Exam New')
+        .type('Self-Test-Practise-2')
     // Multiple DropDowns at same place
     Assessment.getDropdown()
         .eq(2)
@@ -63,7 +63,7 @@ it('opening Assessments Test case',function() {
     // going back to Assessments dashboard
     Assessment.getBackbutton().click()
     // opening assesments from dashboard
-    cy.contains('Practical Exam New')
+    cy.contains('Self-Test-1')
         .click()  // oprning test from assessment dashboard
 })
 it('Assessing All questions Tabs',function() {    
