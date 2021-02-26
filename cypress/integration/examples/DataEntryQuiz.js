@@ -125,7 +125,7 @@ describe('My First Test Suite', function()
           .click()
         DEntry.getSaving()
           .click()
-        cy.Logout()    
+        //cy.Logout()    
     })
     
 })

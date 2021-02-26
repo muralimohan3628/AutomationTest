@@ -16,7 +16,6 @@ it('opening Assessments ',function() {
         .click()    
 })
 it('Creating Assessments',function() {
-    const Assessment = new Assessments()
     Assessment.getCreateNewAssesment()
         .click()
     Assessment.getAssessmentsName()
@@ -123,8 +122,5 @@ it('Sum of all', function(){
         expect(Number(total)).to.equal(sum)
         cy.log(total)
     })
-})
-it('Logout test',function() {
-    cy.Logout()
 })
 })

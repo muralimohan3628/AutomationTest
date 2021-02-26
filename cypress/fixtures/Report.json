@@ -1,17 +1,16 @@
 {
-    "TeacherUserName":"erudt.01",
-    "TeacherPassword":"erudt.01",
-    "Class":"Class 10",
-    "Organisation":"ERUDEX",
+    "TeacherUserName":"eru.teacher2",
+    "TeacherPassword":"eru.teacher2",
+    "Class":"Class 12",
+    "Organisation":"Sai S",
     "Section":"A",
     "MonthPerform":"Performance Report By Month",
-    "GradeSubj":"Social Studies",
-    "gradechapter":"6. The People",
-    "PerformTopic":"1. Introduction",
+    "GradeSubj":"Physics",
+    "gradechapter":"2. Electrostatic Potential And Capacitance",
+    "PerformTopic":"2. Electrostatic Potential",
     "MonthUsage":"Usage Report By Month",
-    "Subjects":"Biology",
-    "SubjIntro":"1. Nutrition - Food Supplying System",
+    "Subjects":"Physics",
+    "SubjIntro":"2. Electrostatic Potential And Capacitance",
     "grade":"Grade",
-    "CustomDate":"Custom Dates",
-    "PScinece":"Physical Science"
+    "CustomDate":"Custom Dates"    
 }

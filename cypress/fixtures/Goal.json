@@ -1,11 +1,9 @@
 {
-    "TeacherUserName":"erudt.01",
-    "TeacherPassword":"erudt.01",
-    "name":"MuraliMohan",
-    "Class":"Class 10",
+    "TeacherUserName":"eru.teacher2",
+    "TeacherPassword":"eru.teacher2",
+    "name":"Goal Name",
+    "Class":"Class 12",
     "Section":"A",
-    "Subject":"Mathematics",
-    "Goal1":"Low(40%-60%)",
-    "Goal2":"Medium(61%-80%)",
-    "Goal3":"Hgih(80%-100%)"
+    "Subject":"Physics",
+    "Goal":"High(80%-100%)"
 }

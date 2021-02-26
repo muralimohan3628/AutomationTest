@@ -1,10 +1,10 @@
 {
-    "TeacherUserName":"erudt.01",
-    "TeacherPassword":"erudt.01",
+    "TeacherUserName":"eru.teacher2",
+    "TeacherPassword":"eru.teacher2",
     "Content":"New Content",
-    "ContentCls":"State Board-Class 10",
-    "Subject":"Mathematics",
-    "ContentChpter":"2 . Respiration-the Energy Releasing System",
-    "ContentTopic":"4 . Breathing",
-    "ContentSubTopic":"1 . Breathing",
+    "ContentCls":"Cbse-Class 12",
+    "Subject":"Physics",
+    "ContentChpter":"2 . Electrostatic Potential And Capacitance",
+    "ContentTopic":"2 . Electrostatic Potential",
+    "ContentSubTopic":"1 . Electrostatic Potential"
 }
