@@ -4,10 +4,10 @@ class Curriculam
     {
         return cy.get('ul li.option').contains('CBSE-Class 12')
     }
-    //getSubChemistry()
-    //{
-      //  return cy.get('.subject-button.Chemistry ')
-    //}
+    getSubChemistry()
+    {
+        return cy.get('.subject-button.Chemistry')
+    }
     getSubMathematics()
     {
         return cy.get('.subject-button.Mathematics')
